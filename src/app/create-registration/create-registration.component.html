@@ -63,7 +63,12 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Height</mat-label>
-          <input formControlName="height" matInput placeholder="Height" />
+          <input
+            [readonly]="!this.registerForm.value?.weight"
+            formControlName="height"
+            matInput
+            placeholder="Height"
+          />
           <mat-icon matSuffix>
             <i class="fa fa-text-height" aria-hidden="true"></i>
           </mat-icon>
