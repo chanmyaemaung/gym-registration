@@ -205,6 +205,7 @@
     </div>
 
     <button
+      *ngIf="!isUpdate"
       (click)="submitForm()"
       mat-raised-button
       color="accent"
@@ -212,6 +213,16 @@
       class="mt-4"
     >
       Submit
+    </button>
+    <button
+      *ngIf="isUpdate"
+      (click)="updateForm()"
+      mat-raised-button
+      color="accent"
+      type="submit"
+      class="mt-4"
+    >
+      Update
     </button>
   </form>
 </div>
