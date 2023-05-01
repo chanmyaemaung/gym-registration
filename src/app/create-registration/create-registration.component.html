@@ -8,7 +8,11 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>First Name</mat-label>
-          <input formControlName="firstName" matInput placeholder="First Name" />
+          <input
+            formControlName="firstName"
+            matInput
+            placeholder="First Name"
+          />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
       </div>
@@ -24,7 +28,12 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input formControlName="email" matInput placeholder="Email" type="email" />
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Email"
+            type="email"
+          />
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
       </div>
@@ -32,7 +41,12 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Mobile</mat-label>
-          <input formControlName="phone" matInput placeholder="Mobile" type="tel" />
+          <input
+            formControlName="phone"
+            matInput
+            placeholder="Mobile"
+            type="tel"
+          />
           <mat-icon matSuffix>phone</mat-icon>
         </mat-form-field>
       </div>
@@ -58,8 +72,40 @@
       </div>
 
       <div class="col-md-6 mt-3">
+        <mat-form-field appearance="outline">
+          <mat-label>BMI</mat-label>
+          <input
+            readonly
+            formControlName="bmi"
+            matInput
+            placeholder="BMI"
+            type="number"
+          />
+          <mat-icon matSuffix>
+            <i class="fa fa-sort-numeric-desc" aria-hidden="true"></i>
+          </mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 mt-3">
+        <mat-form-field appearance="outline">
+          <mat-label>BMI Result</mat-label>
+          <input
+            readonly
+            formControlName="bmiResult"
+            matInput
+            placeholder="BMI Result"
+          />
+          <mat-icon matSuffix>
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 mt-3">
         <label id="trainer">Do you require trainer?</label>
-        <mat-radio-group formControlName="requireTrainer"
+        <mat-radio-group
+          formControlName="requireTrainer"
           aria-labelledby="Select trainer label require"
           class="example-radio-group"
         >
@@ -76,7 +122,8 @@
 
       <div class="col-md-6 mt-3">
         <label id="gender">Gender</label>
-        <mat-radio-group formControlName="gender"
+        <mat-radio-group
+          formControlName="gender"
           aria-labelledby="Select gender label require"
           class="example-radio-group"
         >
@@ -106,7 +153,10 @@
         <mat-form-field appearance="outline">
           <mat-label>Which of the following is important to you?</mat-label>
           <mat-select multiple formControlName="important">
-            <mat-option *ngFor="let important of importantList" [value]="important">
+            <mat-option
+              *ngFor="let important of importantList"
+              [value]="important"
+            >
               {{ important }}
             </mat-option>
           </mat-select>
@@ -115,7 +165,8 @@
 
       <div class="col-md-6">
         <label id="trainer">Have been Gym before</label>
-        <mat-radio-group formControlName="haveGymBefore"
+        <mat-radio-group
+          formControlName="haveGymBefore"
           aria-labelledby="Have been Gym before label require"
           class="example-radio-group"
         >
@@ -133,7 +184,11 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Enquiry date</mat-label>
-          <input formControlName="enquiryDate" matInput [matDatepicker]="picker" />
+          <input
+            formControlName="enquiryDate"
+            matInput
+            [matDatepicker]="picker"
+          />
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle
             matIconSuffix
@@ -144,6 +199,14 @@
       </div>
     </div>
 
-    <button (click)="submitForm()" mat-raised-button color="accent" type="submit" class="mt-4">Submit</button>
+    <button
+      (click)="submitForm()"
+      mat-raised-button
+      color="accent"
+      type="submit"
+      class="mt-4"
+    >
+      Submit
+    </button>
   </form>
 </div>
